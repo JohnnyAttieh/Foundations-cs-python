@@ -55,18 +55,18 @@ def check_format(value):
       key_str = f'"{key}"'
       value_str = check_format(value)
       items.append(f"{key_str}: {value_str}")
-    return "{" + ", ".join(items) + "}"
+    return "{" + ", ".join(items) + "}" # if the value is a dictionary
   elif type(value) == list:
         elements = []
         for item in value:
             elements.append(check_format(item))
-        return "[" + ", ".join(elements) + "]"
+        return "[" + ", ".join(elements) + "]" # if the value is list
   elif type(value) == str:
-    return f'"{value}"'
+    return f'"{value}"'# if the value is string
   elif type(value) in (int, float):
-    return f'"{value}"'
+    return f'"{value}"'# if the value is unt or float
   elif value is None:
-    return "null"
+    return "null" # if the value is none
 
 
 
@@ -82,19 +82,20 @@ print("\n")
 while (input_user != 4):
     if (input_user == 1):
       print(calculateTuple())
+      
     elif (input_user == 2):
       json_string = format(dict1)
       print(json_string)
       
     elif (input_user == 3):
       print("Option not available")
+      
     else:
       print("Invalid choice")
     print("\n")
     displayMenu()
     input_user  = int(input("Enter your choice: "))
-  
-    
+# display the menu and calling the right function for the right choice  
 
 
 
