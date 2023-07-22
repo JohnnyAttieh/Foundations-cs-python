@@ -99,4 +99,13 @@ while (input_user != 4):
 
 
 
-
+## Big-O notation exercise ##
+  
+# a. O(N^3)
+# b. O(N^3)
+# c. O(N!)
+# d. O(NlogN)
+# e. O(N)
+# f. O(N^2)
+# g. O(N^2)
+# h. O(N!)
